@@ -1,15 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <title>NV Spirit Store</title>
+        <title>Spotibyte</title>
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
         <header>
-            <h1>NV Spirit Store</h1>
+            <h1>Welcome to Spotibyte</h1>
         </header>
         <section id="account">
             <form>
+                <h3>Login</h3>
+                <label for="email">Email: </label>
+                <input name="email" required>
+                <label for="password">Password: </label>
+                <input name="password" type="password" required>
+                <input type="submit" onClick="login(event)">
+                    
+            </form>
+            <form>
+                <h3>Register</h3>
                 <label for="first">First Name: </label>
                 <input name="first" required>
                 <label for="last">Last Name: </label>
@@ -19,14 +29,33 @@
                 <label for="password">Password: </label>
                 <input name="password" type="password" required>
                 <input type="submit" onClick="login(event)">
+                    
             </form>
         </section>
         <section id="cart">
             <h3>Cart</h3>
+            <label for="song">Song Name: </label>
+                <input name="song" required>
+            <input type="submit" onClick="song(event)">
             <ul>
             </ul>
         </section>
-        <section id="items">
+        <section id="songs">
+            <div class="song">
+            <h3>Name: Born to Be Yours</h3>            
+            <button onClick="addToCart(${item.itemid}, event)">Add to Cart</button>
+                <button onClick="addToCart(${item.itemid}, event)">Like</button>
+        </div>
+            <div class="song">
+            <h3>Name:Be Alright</h3>            
+            <button onClick="addToCart(${item.itemid}, event)">Add to Cart</button>
+                <button onClick="addToCart(${item.itemid}, event)">Like</button>
+        </div>
+            <div class="song">
+            <h3>Name:Promises</h3>            
+            <button onClick="addToCart(${item.itemid}, event)">Add to Cart</button>
+                <button onClick="addToCart(${item.itemid}, event)">Like</button>
+        </div>
         </section>
         <script src="script.js"></script>
     </body>
